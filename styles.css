@@ -22,7 +22,6 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-    transition: transform 0.3s ease;
 }
 
 .sidebar nav ul {
@@ -45,50 +44,11 @@ body {
     background-color: #b03a5b;
 }
 
-/* Hide Sidebar on Mobile */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%); /* Hide sidebar off-screen */
-    }
-    .sidebar.active {
-        transform: translateX(0); /* Show sidebar when active */
-    }
-
-    /* Toggle Button Styling */
-    .menu-toggle {
-        display: block;
-        background-color: #800020;
-        color: white;
-        font-size: 24px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1000;
-    }
-
-    /* Adjustments to Main Content when Sidebar is Visible */
-    .content {
-        margin-left: 0;
-        width: 100%;
-        padding: 20px;
-    }
-
-    footer {
-        width: 100%;
-        margin-left: 0;
-        padding: 15px;
-        font-size: 0.9em;
-    }
-}
-
-/* Content Area Styling for Desktop */
+/* Content Area Styling */
 .content {
-    margin-left: 220px;
+    margin-left: 220px; /* Adjusts for sidebar width */
     padding: 20px;
-    width: calc(100% - 220px);
+    width: calc(100% - 220px); /* Takes remaining width */
     display: flex;
     flex-direction: column;
 }
@@ -145,10 +105,10 @@ section {
     background-color: #f1f1f1;
 }
 
-/* Footer Styling for Desktop */
+/* Footer Styling */
 footer {
-    width: calc(100% - 200px);
-    margin-left: 200px;
+    width: calc(100% - 220px); /* Aligns footer with content area */
+    margin-left: 200px; /* Aligns with sidebar */
     background-color: #333;
     color: white;
     text-align: center;
