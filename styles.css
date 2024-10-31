@@ -22,6 +22,7 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
+    z-index: 1000; /* Ensures sidebar is above content */
 }
 
 .sidebar nav ul {
@@ -118,37 +119,37 @@ footer {
 
 /* Mobile-Specific Styles */
 @media (max-width: 768px) {
-    /* Hide Sidebar Completely on Mobile */
+    /* Force Sidebar to be Hidden on Mobile */
     .sidebar {
-        display: none;
+        display: none !important;
     }
 
     /* Make Content Full-Width on Mobile */
     .content {
-        margin-left: 0;
-        width: 100%; /* Full width on mobile */
-        padding: 20px;
+        margin-left: 0 !important;
+        width: 100% !important; /* Full width on mobile */
+        padding: 20px !important;
     }
 
     footer {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0;
-        padding: 15px;
-        font-size: 0.9em;
+        width: 100% !important; /* Full width on mobile */
+        margin-left: 0 !important;
+        padding: 15px !important;
+        font-size: 0.9em !important;
     }
 
     /* Adjust Profile Image and Header for Mobile */
     .profile-image {
-        width: 100px; /* Smaller profile image on mobile */
-        margin-top: 10px;
+        width: 100px !important; /* Smaller profile image on mobile */
+        margin-top: 10px !important;
     }
 
     header {
-        padding: 15px;
+        padding: 15px !important;
     }
 
     section {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 15px !important;
+        margin-bottom: 15px !important;
     }
 }
