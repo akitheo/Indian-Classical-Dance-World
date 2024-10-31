@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     display: flex;
+    min-height: 100vh;
 }
 
 /* Sidebar Styling */
@@ -19,12 +20,13 @@ body {
     color: white;
     padding-top: 20px;
     position: fixed;
-    height: 100%;
-    overflow: auto;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .sidebar nav ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 .sidebar nav ul li {
@@ -47,66 +49,37 @@ body {
     margin-left: 220px;
     padding: 20px;
     width: calc(100% - 220px);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header Styling */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    background-color: #800020;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
+.profile-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styling */
 section {
     padding: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    width: calc(100% - 200px); /* Accounts for the sidebar width */
-    margin-left: 200px; /* Aligns it with the main content */
-    padding: 15px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    font-size: 0.9em;
-    position: relative;
-    bottom: 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-}
-.mudra {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.mudra img {
-    width: 100%; /* Adjust as needed */
-    max-width: 200px; /* Set a max width for consistency */
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: block;
-}
-header {
-    position: relative;
-    text-align: center;
-    padding: 10px 0;
-    background-color: #800020;
-    color: white;
-}
-
-.profile-image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 100px; /* Adjust the size as needed */
-    height: auto;
-    border-radius: 50%; /* Makes it circular */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
+/* Table Styling */
 .class-table {
     width: 100%;
     border-collapse: collapse;
@@ -130,4 +103,15 @@ header {
 
 .class-table tr:hover {
     background-color: #f1f1f1;
+}
+
+/* Footer Styling */
+footer {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
 }
