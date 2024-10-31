@@ -46,9 +46,9 @@ body {
 
 /* Content Area Styling */
 .content {
-    margin-left: 220px; /* Adjusts for sidebar width */
+    margin-left: 220px; /* Aligns content with sidebar on larger screens */
     padding: 20px;
-    width: calc(100% - 220px); /* Takes remaining width */
+    width: calc(100% - 220px);
     display: flex;
     flex-direction: column;
 }
@@ -107,11 +107,48 @@ section {
 
 /* Footer Styling */
 footer {
-    width: calc(100% - 220px); /* Aligns footer with content area */
-    margin-left: 200px; /* Aligns with sidebar */
+    width: calc(100% - 200px); /* Aligns with sidebar width */
+    margin-left: 200px;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 0.9em;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 768px) {
+    /* Hide Sidebar Completely on Mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Make Content Full-Width on Mobile */
+    .content {
+        margin-left: 0;
+        width: 100%; /* Full width on mobile */
+        padding: 20px;
+    }
+
+    footer {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    /* Adjust Profile Image and Header for Mobile */
+    .profile-image {
+        width: 100px; /* Smaller profile image on mobile */
+        margin-top: 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 }
