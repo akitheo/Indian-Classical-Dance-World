@@ -22,6 +22,7 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
+    transition: transform 0.3s ease;
 }
 
 .sidebar nav ul {
@@ -44,7 +45,46 @@ body {
     background-color: #b03a5b;
 }
 
-/* Content Area Styling */
+/* Hide Sidebar on Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Hide sidebar off-screen */
+    }
+    .sidebar.active {
+        transform: translateX(0); /* Show sidebar when active */
+    }
+
+    /* Toggle Button Styling */
+    .menu-toggle {
+        display: block;
+        background-color: #800020;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    /* Adjustments to Main Content when Sidebar is Visible */
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Content Area Styling for Desktop */
 .content {
     margin-left: 220px;
     padding: 20px;
@@ -105,7 +145,7 @@ section {
     background-color: #f1f1f1;
 }
 
-/* Footer Styling */
+/* Footer Styling for Desktop */
 footer {
     width: calc(100% - 200px);
     margin-left: 200px;
@@ -114,55 +154,4 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9em;
-}
-
-/* Responsive Styling for Mobile Devices */
-@media (max-width: 768px) {
-    /* Stack sidebar and content vertically */
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding-top: 10px;
-        margin-bottom: 20px;
-        background-color: #800020;
-    }
-
-    .sidebar nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .sidebar nav ul li {
-        margin: 10px;
-    }
-
-    .content {
-        margin-left: 0;
-        width: 100%;
-        padding: 10px;
-    }
-
-    header {
-        padding: 15px;
-    }
-
-    .profile-image {
-        width: 100px; /* Resize image for mobile */
-        margin: 10px auto;
-    }
-
-    section {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    footer {
-        width: 100%;
-        margin-left: 0;
-        padding: 10px;
-        font-size: 0.8em;
-    }
 }
