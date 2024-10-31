@@ -125,3 +125,14 @@ header {
 .class-table tr:hover {
     background-color: #f1f1f1;
 }
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
