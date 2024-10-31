@@ -11,7 +11,6 @@ body {
     background-color: #f8f8f8;
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
 }
 
 /* Sidebar Styling */
@@ -31,7 +30,7 @@ body {
 }
 
 .sidebar nav ul li {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .sidebar nav ul li a {
@@ -117,7 +116,7 @@ footer {
     font-size: 0.9em;
 }
 
-* Responsive Styling for Mobile Devices */
+/* Responsive Styling for Mobile Devices */
 @media (max-width: 768px) {
     /* Stack sidebar and content vertically */
     .sidebar {
