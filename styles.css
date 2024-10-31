@@ -11,6 +11,7 @@ body {
     background-color: #f8f8f8;
     display: flex;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 /* Sidebar Styling */
@@ -114,4 +115,30 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9em;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+    /* Stack sidebar and content vertically */
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .profile-image {
+        width: 100px; /* Resize image for mobile */
+    }
 }
